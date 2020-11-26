@@ -1,73 +1,97 @@
-import {peso} from "./peso";
+import { peso } from "./peso";
 
 
-describe('unit Test Rango de Peso', () => {
+describe('unit Test peso', () => {
 
-    it('Recibe información rango 16 =peso bajo  ', () => {
+    it('Tabla edad:niño, imc:16.3, genero: mujer = peso normal', () => {
         // Pattern AAA (Arrange - Act - Assert)
 
         // Arrange
         let result = '';
 
         // Act
-        result = peso(16);
+        result = peso('niño', 16.3, 'mujer');
+
+        // Assert
+        expect(result).toBe('peso normal');
+    })
+
+    it('Tabla: edad:niño imc:15.6, genero: masculino = peso normal', () => {
+        // Pattern AAA (Arrange - Act - Assert)
+
+        // Arrange
+        let result = '';
+
+        // Act
+        result = peso('niño', 15.6,'masculino');
+
+        // Assert
+        expect(result).toBe('peso normal');
+    })
+
+    it('Tabla: edad:niño, imc:17.3, genero: mujer = sobrepeso', () => {
+        // Pattern AAA (Arrange - Act - Assert)
+
+        // Arrange
+        let result = '';
+
+        // Act
+        result = peso('niño',17.3,'mujer');
+
+        // Assert
+        expect(result).toBe('sobrepeso');
+    })
+
+    it('Tabla edad:adolesecente, imc:16.0, genero: masculino = peso bajo', () => {
+        // Pattern AAA (Arrange - Act - Assert)
+
+        // Arrange
+        let result = '';
+
+        // Act
+        result = peso('adolescente', 16.0, 'masculino');
 
         // Assert
         expect(result).toBe('peso bajo');
     })
 
-    it('Recibe información rango 18 = peso bajo', () => {
+    it('Tabla edad:adolescente, imc:17.9, genero: mujer = peso normal', () => {
         // Pattern AAA (Arrange - Act - Assert)
 
         // Arrange
         let result = '';
 
         // Act
-        result = peso(18);
+        result = peso('adolescente', 17.9, 'mujer');
 
         // Assert
-        expect(result).toBe('peso bajo');
+        expect(result).toBe('peso normal');
     })
 
-    it('Recibe información rango 32.4 = obesidad 1 ', () => {
+    it('Tabla edad:adulto, imc:26.5, genero: mujer = sobrepeso', () => {
         // Pattern AAA (Arrange - Act - Assert)
 
         // Arrange
         let result = '';
 
         // Act
-        result = peso(32.4);
+        result = peso('adulto', 26.5, 'mujer');
 
         // Assert
-        expect(result).toBe('obesidad 1');
+        expect(result).toBe('sobrepeso');
     })
-
-    it('Recibe información rango 35 = obesidad 2 ', () => {
+    it('Tabla edad:adulto, imc:26.5, genero: masculino = sobrepeso', () => {
         // Pattern AAA (Arrange - Act - Assert)
 
         // Arrange
         let result = '';
 
         // Act
-        result = peso(35);
+        result = peso('adulto', 26.5, 'masculino');
 
         // Assert
-        expect(result).toBe('obesidad 2');
+        expect(result).toBe('sobrepeso');
     })
 
-    it('Recibe información rango 43 = obesidad 3', () => {
-        // Pattern AAA (Arrange - Act - Assert)
 
-        // Arrange
-        let result = '';
-
-        // Act
-        result = peso(43);
-
-        // Assert
-        expect(result).toBe('obesidad 3');
-
-
-    })
-
-})  
+})
