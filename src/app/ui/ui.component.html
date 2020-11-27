@@ -1,0 +1,54 @@
+<html>
+    <header>
+        <p>
+
+        </p>
+    </header>
+    <div class="contenedor">
+        <div class="der">
+            <div class="centrar">
+                <h3>Peso en kilogramos:</h3>
+                <div class="centrar">
+                    <input matInput [(ngModel)]="peso" type="number" class="form-control peso" placeholder="Peso en Kg">
+                </div>
+                <mat-form-field appearance="fill">
+                <mat-label>Altura en centimetros</mat-label>
+                    <mat-select [(value)]="altura">       
+                        <mat-option *ngFor="let estatura of getEstatura();" value={{estatura}}>{{estatura}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="fill">
+                    <mat-label>Genero</mat-label>
+                    <mat-select [(value)]="genero">
+                        <mat-option value="Mujer">Mujer</mat-option>
+                        <mat-option value="Hombre">Hombre</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <br>
+                <mat-form-field appearance="fill">
+                <mat-label>Edad</mat-label>
+                    <mat-select [(value)]="edad" >
+                        <mat-option *ngFor="let edad of getAge();" value={{edad}}>{{edad}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+            <br>
+            <div class = "example-button-row">
+                <input class="bn" type="button" (click)="calculateImc()" value="Calcular"/>
+            </div>
+            </div>
+        </div>
+
+        <div class="izq">
+            <div class = "centrar">
+                <h1>RESULTADOS:</h1>
+                <li>Estatura:{{altura}}</li>
+                <li>Peso:{{peso}}</li>
+                <li>Edad:{{edad}}</li>
+                <li>Genero:{{genero}}</li>
+                <li>IMC:{{imc}}</li>
+            </div>
+        </div>
+    </div>
+</html>
