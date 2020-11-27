@@ -3,9 +3,8 @@ min-width: 150px;
 max-width: 500px;
 width: 100%;
 }
-
-header {
-    display: block;
+.example-full-width {
+    width: 100%;
   }
 .contenedor{
 width: 100%;
@@ -24,6 +23,7 @@ background-color: #fafafa;
     margin-left: 8px;
     min-width: 120px;
   }
+
   .example-button-row .mat-button-base {
     margin: auto;
   }
@@ -45,7 +45,7 @@ padding: 1rem;
 border: 1px solid #ccc;
 text-align: left;
 }
-
+    
 .bn{
     background-color: #4CAF50; /* Green */
     border: none;

@@ -1,19 +1,19 @@
 <html>
-    <header>
-        <p>
-
-        </p>
+    <header class="centrar">
+        <h1>Calculadora IMC</h1>
+        <p>Pruebas de software</p>
     </header>
     <div class="contenedor">
         <div class="der">
             <div class="centrar">
-                <h3>Peso en kilogramos:</h3>
                 <div class="centrar">
-                    <input matInput [(ngModel)]="peso" type="number" class="form-control peso" placeholder="Peso en Kg">
+                    <h3>Peso en Kilogramos</h3>
+                <input type="number" matInput placeholder="peso en kg" class="form-control peso" >
                 </div>
+                <br>
                 <mat-form-field appearance="fill">
                 <mat-label>Altura en centimetros</mat-label>
-                    <mat-select [(value)]="altura">       
+                    <mat-select [(value)]="altura" type="number">       
                         <mat-option *ngFor="let estatura of getEstatura();" value={{estatura}}>{{estatura}}</mat-option>
                     </mat-select>
                 </mat-form-field>
@@ -43,11 +43,11 @@
         <div class="izq">
             <div class = "centrar">
                 <h1>RESULTADOS:</h1>
-                <li>Estatura:{{altura}}</li>
-                <li>Peso:{{peso}}</li>
-                <li>Edad:{{edad}}</li>
-                <li>Genero:{{genero}}</li>
-                <li>IMC:{{imc}}</li>
+                <mat-list>Estatura:{{altura}}</mat-list>
+                <mat-list>Peso:{{peso}}</mat-list>
+                <mat-list>Edad:{{edad}}</mat-list>
+                <mat-list>Genero:{{genero}}</mat-list>
+                <mat-list>IMC:{{imc}}</mat-list>
             </div>
         </div>
     </div>
