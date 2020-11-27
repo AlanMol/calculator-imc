@@ -19,7 +19,7 @@ export class UiComponent implements OnInit {
 
   calculateImc(){
     //su logica aqui
-    //this.imc = imc(altura,peso);
+    this.imc = imc(altura,peso);
 
   }
   ngOnInit(): void {
