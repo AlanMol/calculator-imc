@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+//import {imc} from '../imc/imc';
 
 
 @Component({
@@ -19,8 +20,11 @@ export class UiComponent implements OnInit {
 
   calculateImc(){
     //su logica aqui
-    //this.imc = imc(altura,peso);
-
+   // let resul = null;
+    //resul = imc(this.altura, this.peso);
+    //this.imc = resul;
+    //this.gen();
+    //this.estado();
   }
   ngOnInit(): void {
   }
