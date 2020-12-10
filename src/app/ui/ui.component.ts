@@ -18,7 +18,7 @@ export class UiComponent implements OnInit {
 
   }
 
-  calculateimc(){
+  calculateImc(){
     //su logica aqui
    // let resul = null;
     //resul = imc(this.altura, this.peso);
